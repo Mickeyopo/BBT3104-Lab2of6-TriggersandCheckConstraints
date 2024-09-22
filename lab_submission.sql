@@ -40,7 +40,7 @@ DROP CONSTRAINT IF EXISTS chk_part_price;
 -- Step 2: Add the new check constraint
 ALTER TABLE part
 ADD CONSTRAINT chk_part_price
-CHECK (part_sellingprice > part_-- Step 1: Drop the existing check constraint if it exists
+CHECK (part_selling_price > part_-- Step 1: Drop the existing check constraint if it exists
 -- (Replace `chk_part_price` with the actual constraint name if it's different)
 ALTER TABLE part
 DROP CONSTRAINT IF EXISTS chk_part_price;
@@ -48,5 +48,5 @@ DROP CONSTRAINT IF EXISTS chk_part_price;
 -- Step 2: Add the new check constraint
 ALTER TABLE part
 ADD CONSTRAINT chk_part_price
-CHECK (part_sellingprice > part_buyingprice);
+CHECK (part_selling_price > part_buying_price);
 );
